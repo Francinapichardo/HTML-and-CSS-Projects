@@ -1,0 +1,89 @@
+/*---------------------------------
+    GENERIC STYLES
+---------------------------------*/
+html {
+    font-family: sans-serif;
+    font-size: 65.5%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    font-size: 14px;
+    margin: 0;
+    font-family: Georgia, serif;
+    line-height: normal;
+    color:#333;
+    background-color: #fff;
+}
+
+input {
+    width: 40%;
+    border: 1px solid rgb(0, 86, 139);
+    border-radius: 6px;
+    margin: 2px;
+}
+
+nav {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    line-height: 50px;
+    font-weight: 900;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #36bcaf;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+h1::after {
+    display: block;
+    height: 2px;
+    width: 150px;
+    background: #050404;
+    margin: 5px auto 40px;
+    box-shadow: 5px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    line-height: 50px;
+    color: #020202
+}
+
+h3 {
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+
+h4 {
+    padding-top: 25px;
+    line-height: 40px;
+    padding-bottom: 0px;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+/*--------------------------------------------------
+    HOME SECTION STYLES
+--------------------------------------------------*/
+#home {
+    background: url(../images/Thumb/backgroung1.jpg)no-repeat 50% 50% ;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    display: block;
+    height: auto;
+    padding-top:  350px; /*This is spacer before the Main title Logo*/
+    padding-bottom: 500px; /*This is spacer after the Main title Logo*/
+    color: #fff;
+}
