@@ -4,145 +4,97 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Adventures</title>
+		<title>Travels and Adventures</title>
 		<link rel="stylesheet" href="./CSS/one_page_website.css">
 	</head>
 
 	<!--Body-->
-	<body>
-		<h1>Travels and Adventures</h1>
+		<body class="Background">
+			<h1>Travels and Adventures</h1>
+		</body>
 		
-		<!-- NAV -->
-	<div class="Navbar"></div>
-		<div>
-			<ul>
+	<!-- NAV -->
+		<div class="Navbar">
 				<a href="#home" id="link"><li>HOME</li></a>
-				<a href="#gallery"><li>GALLERY</li></a>
-				<a href="videos"><li>VIDEOS</li></a>
-				<a href="#contact"><li>RESERVATIONS</h1></a>
-			</ul>
+				<a href="#Slideshow"><li>GALLERY</li></a>
+				<!-- Onclick and ondblclick functions added to open and close the contact form -->
+				<a onclick="openForm()" ondblclick="closeForm()" class="contact"><li>CONTACT</li></a>
+				<input type="text" placeholder="Search..">
 		</div>
-	</div>
+
 	<!--END NAV -->
 
 	<!--HOME -->
-	<div id="home">
-		<div>
+		<div id="home">
 			<div>
-				<span>See all trips and deals</span>
-			</div>
-		</div>
-	</div>
-	<!--END HOME -->
-	
-	<!--GALLERY -->
-	<section>
-		<div id="gallery">
-			<h1>Gallery</h1>
-				<div class="row">
-					<div class="column">
-						<img src="images/Thumb/Thumbnail_1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-					</div>
-
-					<div class="column">
-						<img src="images/Thumb/Thumbnail_2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-
-
-						<div id="myModal" class="modal">
-								<span class="close cursor" onclick="closeModal()">&times;</span>
-							<div class="modal-content">
-
-								<div class="mySlides">
-									<div class="numbertext">1 / 2</div>
-									<img src="images/Thumb/Thumbnail_1.jpg" style="width: 100%">
-								</div>
-
-								<div class="mySlides">
-									<div class="numbertext">2 / 1</div>
-									<img src="images/Thumb/Thumbnail_2.jpg" style="width:80%">
-								</div>
-
-								<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-								<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-								<div class="caption-container">
-									<p id="caption"></p>
-								</div>
-
-
-								<div class="column">
-									<img class="demo cursor" src="./images/Thumb/Thumbnail_1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
-								</div>
-								<div class="column">
-									<img class="demo cursor" src="/images/Thumb/Thumbnail_2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Travels">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-				<!-- VIDEOS -->
-				<div id="videos">
-					<h1>Destinations</h1>
-					<div>
-						<div>
-							<nav>
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/y6E1L6KVwYw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							</nav>
-						</div>
-					</div>
-				</div>
-					
-		<article>
-			<h2>Epic trips</h2>
-			<p>Seeing the world should be fun, is a life changing experience.</p>
-		</article>
-		<details>
-			<summary>Find your trip</summary>
-			<p>Look for the contries you want to visit the most.</p>
-		</details>
-
-		<!--RSVP -->
-	<section>
-		<div id="contact">
-			<div>
-				<h1>Reservations</h1>
 				<div>
-					<h2><span>Your new adventure can start with just one click.</span>
-						<br />Reserve your flight today!
-					</h2>
-					<h3>Trip Consultans</h3>
-					<p>If you're booking a trip or scheduled to travel in the next 60 days and have questions, call us.<br>
-					<time>8:00 AM</time> to <time>5:00 PM</time>every weekday.</p>
-					<p>
-						Please provide us with yout basic contact information.
-					</p>
-					<div>
-						<form action="" metod="post">
-							<input class="rsvp" type="text" value="First Name">
-							<input class="rsvp" type="text" value="Last Name">
-							<input class="rsvp" type="text" value="Email Address">
-							<input class="rsvp" type="text" value="Phone Number">
-							<div class="form-spacer">
-								<label class="terms">Terms and Conditions</label>
-							</div>
-							<div>
-								<input type="submit" value="submit">
-							</div>
-						</form>
-					</div>
+					<span>See all trips and deals</span>
 				</div>
 			</div>
 		</div>
-	</section>
-	<!--END RSVP -->
+
+        <!--Breaks inserted to add space between navbar and the first heading-->
+        <br>
+        <br>
+	<!--END HOME -->
+
+
+	<!--SlIDESHOW-->
+		<div id="Slideshow">
+			<div id="Slideshow_Background"> 
+				<div id="Slideshow_Container">
+						<!-- Slide 1 of 2 -->
+						<div class="mySlides fade">
+							<img class="Slideshow_Images" src="images/Thumb/Thumbnail_1.jpg" alt="Airport">
+						</div>
+						<!-- Slide 2 of 2 -->
+						<div class="mySlides fade">
+							<img class="Slideshow_Images" src="images/Thumb/Thumbnail_2.jpg" alt="Travel">
+						</div>
+						<!-- Previous and next buttons -->
+						<a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="Next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				<br> <!-- Adds a space between the slideshow images and the dots -->
+
+				<!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+				<div style="text-align: center">
+				   <span class="dot" onclick="currentSlide(1)"></span>
+				   <span class="dot" onclick="currentSlide(2)"></span>
+				</div>
+			</div>
+		</div>
+
+	<!--END SLIDESHOW-->
+
+    <!--Contact section-->
+    <!-- Contact form -->
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                 <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+                    <h1>Contact</h1> 
+                     <label for="name"><b>Name</b></label>
+                       <input type="text" placeholder="Type your name here" name="name" required>
+                     <label for="phone"><b>Phone</b></label>
+                       <input type="text" placeholder="Type your phone number here" name="phone">
+                     <label for="email"><b>Email</b></label>		
+                       <input type="text" placeholder="Type your email address here" name="email" required>
+                     <label for="message"><b>Message</b></label>
+                       <input type="text" placeholder="Type your message here" name="message">
+          
+                     <button type="submit" class="btn">SUBMIT</button>
+                     <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                 </form>
+            </div>
+         </div>
 	
-	<!-- FOOTER -->
-	<div>
-		www.travelandadventures.com &nbsp|&nbsp &copy: 2022
-	</div>
-	<!--END FOOTER -->
+	<!--Footer section-->
+	<footer>
+		<p>
+			<p class="center">&copy;2022 Travel and Adventures&reg;
+		</p>
+	</footer>
 
 	<script src="./JS/one_page_website.js"></script>
 
